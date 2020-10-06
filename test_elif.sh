@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-GIT_COMMIT=0
+GIT_COMMIT=""
 commit_o=""
 pr=true
 
