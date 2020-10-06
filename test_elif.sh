@@ -33,4 +33,4 @@ else
   commit="$commit_o"
 fi
 
-echo "end: GIT_COMMIT = $GIT_COMMIT, commit_o = $commit_o, pr = $pr" 
+echo "end: GIT_COMMIT = $GIT_COMMIT, commit_o = $commit_o, commit =  $commit, pr = $pr" 
