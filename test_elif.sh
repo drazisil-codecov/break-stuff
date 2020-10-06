@@ -18,7 +18,7 @@ then
   then
     echo "if 2, line 18"
     echo "    Fixing merge commit SHA"
-    commit=1
+    commit=$(echo "$mc" | cut -d' ' -f2)
   elif [ "$GIT_COMMIT" != "" ];
   then
     echo "first elif, line 23"
