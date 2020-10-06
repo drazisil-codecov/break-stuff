@@ -6,12 +6,13 @@ pr=true
 
 if [ "$commit_o" = "" ];
 then
-  mc=0
+  mc="0 
   if [ -n "$pr" ] && [ "$pr" != false ];
   then
     echo "if 1, line 12"
     echo "is a pr"
-    mc=1
+    mc="bff990372e17185c4e98bbed784e0270c6b01455 c62518a18aa4cd855f6ba8d855335f42f258bf24"
+    echo "$mc"
   fi
   if [[ "$mc" =~ ^[a-z0-9]{40}[[:space:]][a-z0-9]{40}$ ]];
   then
