@@ -4,6 +4,9 @@ GIT_COMMIT=0
 commit_o=""
 pr=true
 
+echo "first mc = $(git show --no-patch --format=\"%P\" 2>/dev/null || echo \"\")"
+echo "second mc = $(git log -1 --format=\"%H\" 2>/dev/null || hg id -i --debug 2>/dev/null | tr -d '+' || echo \"\")"
+
 if [ "$commit_o" = "" ];
 then
   mc="0"
@@ -11,8 +14,8 @@ then
   then
     echo "if 1, line 12"
     echo "is a pr"
-    mc="bff990372e17185c4e98bbed784e0270c6b01455 c62518a18aa4cd855f6ba8d855335f42f258bf24"
-    echo "$mc"
+    mc=$(git show --no-patch --format="%P" 2>/dev/null || echo "")
+    echo "setting mc to $mc"
   fi
   if [[ "$mc" =~ ^[a-z0-9]{40}[[:space:]][a-z0-9]{40}$ ]];
   then
