@@ -32,7 +32,7 @@ then
   then
     echo "commit is \"\""
     commit=$(git log -1 --format="%H" 2>/dev/null || hg id -i --debug 2>/dev/null | tr -d '+' || echo "")
-    echo setting commit to $commit"
+    echo "setting commit to $commit"
   fi
 else
   echo "else"
