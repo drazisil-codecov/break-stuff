@@ -6,7 +6,7 @@ pr=true
 
 if [ "$commit_o" = "" ];
 then
-  mc="0 
+  mc="0"
   if [ -n "$pr" ] && [ "$pr" != false ];
   then
     echo "if 1, line 12"
