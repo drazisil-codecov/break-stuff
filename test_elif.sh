@@ -4,6 +4,7 @@ GIT_COMMIT=""
 commit_o=""
 pr=true
 
+echo $(git show --no-patch --format="%P" 2>/dev/null || echo "")
 echo "first mc = $(git show --no-patch --format=\"%P\" 2>/dev/null || echo \"\")"
 echo "second mc = $(git log -1 --format=\"%H\" 2>/dev/null || hg id -i --debug 2>/dev/null | tr -d '+' || echo \"\")"
 
