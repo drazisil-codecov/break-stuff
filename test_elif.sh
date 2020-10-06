@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 GIT_COMMIT=0
-commit_o="empty"
+commit_o=""
 pr=true
 
 if [ "$commit_o" = "" ];
