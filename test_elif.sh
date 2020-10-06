@@ -22,14 +22,17 @@ then
     echo "if 2, line 18"
     echo "    Fixing merge commit SHA"
     commit=$(echo "$mc" | cut -d' ' -f2)
+    echo setting "commit to $commit"
   elif [ "$GIT_COMMIT" != "" ];
   then
     echo "first elif, line 23"
     commit="$GIT_COMMIT"
+    echo "setting commit to $commit"
   elif [ "$commit" = "" ];
   then
-    echo "second elif, line 27"
+    echo "commit is \"\""
     commit=$(git log -1 --format="%H" 2>/dev/null || hg id -i --debug 2>/dev/null | tr -d '+' || echo "")
+    echo setting commit to $commit"
   fi
 else
   echo "else"
