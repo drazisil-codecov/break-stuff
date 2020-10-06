@@ -29,7 +29,7 @@ then
   elif [ "$commit" = "" ];
   then
     echo "second elif, line 27"
-    commit=2
+    commit=$(git log -1 --format="%H" 2>/dev/null || hg id -i --debug 2>/dev/null | tr -d '+' || echo "")
   fi
 else
   echo "else"
