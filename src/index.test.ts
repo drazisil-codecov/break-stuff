@@ -5,7 +5,7 @@ test('test uncovered if', () => {
     expect(indexObj.uncovered_if()).toEqual(false);
 });
 
-test('fully covered', () => {
-    const indexObj = new Index();
-    expect(indexObj.fully_covered()).toEqual(true);
-});
+//test('fully covered', () => {
+//    const indexObj = new Index();
+//    expect(indexObj.fully_covered()).toEqual(true);
+//});
