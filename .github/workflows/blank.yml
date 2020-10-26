@@ -26,3 +26,10 @@ jobs:
       - name: Run a one-line script
         run: |
           ./test_elif.sh
+      - name: Install and test
+        run: |
+          npm ci
+          npm test
+      - name: Upload
+        run: bash <(curl -s https://codecov.io/bash)
+
