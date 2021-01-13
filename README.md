@@ -5,7 +5,7 @@
 
 ### Last Updated: 10/20/20 20:08:54
 
-## What is this?
+## What is this?   
 
 This is a **TypeScript** application, with basic unit tests, for which coverage is uploaded to Codecov on a daily basis. It can also serve as an example for how to integrate Codecov into your TypeScript project. If the build is passing for this project, then Codecov's TypeScript report processing is functional and correct on codecov.io.
 
